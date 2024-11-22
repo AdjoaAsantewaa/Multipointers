@@ -1,0 +1,338 @@
+.offer-text {
+    position: relative;
+    transform: translateX(-50%);
+    line-height: 1;
+    /* color: #969696; */
+}
+
+.hero-section {
+    position: relative;
+}
+.hero-slide {
+    transition: transform 0.7s ease-in-out;
+    opacity: 0.8;
+}
+
+.translate-y-full {
+    transform: translateY(100%);
+}
+
+/* .offer-text::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: transparent;
+    margin-top: 2px;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .4s ease;
+} */
+
+.offer-text:hover {
+    color: #ea1b25;
+    cursor: pointer;
+    
+}
+
+.offer-text:hover::after {
+    background-color: #ea1b25;
+    opacity: 1;
+}
+
+.offer-text.active {
+    background-color: transparent;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000; /* Use your preferred background color */
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Show dropdown on hover */
+nav .group:hover > .dropdown-content,
+nav .group:hover .dropdown-content:hover {
+    display: block;
+}
+
+/* Ensure dropdown links are styled appropriately */
+.dropdown-content a {
+    color: #969696;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #e32027;
+}
+
+.btn-hover {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 1;
+  }
+
+.btn-hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #545454; /* Slightly darker blue */
+    transition: transform 0.3s;
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: right; /* Change the origin to right for a swipe effect */
+    z-index: -1; /* Behind the button text */
+  }
+
+.btn-hover:hover::after {
+    transform: scaleX(1); /* Expand to full width on hover */
+}
+.btn-hover:hover{
+    transform: scale(1.1)
+}
+
+.btn-hover:active {
+    background-color: #8B0000; /* Deep red */
+}
+.services-image {
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+  
+.services-image:hover {
+    transform: scale(0.9); /* Scale the image up slightly */
+    cursor: pointer;
+}
+ 
+.grid-container h3:hover {
+    /* Add the properties you want to change on hover here */
+    color: black; /* Example: change text color to tomato */
+    cursor: pointer;
+    
+  }
+  
+/* Basic styling for the dropdown */
+.nav-item {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Modal background styling */
+#teamMemberModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Start hidden */
+    pointer-events: none; /* Disable interactions */
+    transition: opacity 0.3s ease-out;
+  }
+  
+  
+  /* Modal background styling */
+#teamMemberModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Start hidden */
+    pointer-events: none; /* Disable interactions */
+    transition: opacity 0.3s ease-out; /* Smooth fade-in/out transition */
+  }
+  
+  /* Modal content container */
+  #teamMemberModal > div {
+    transform: scale(0.75); /* Initial scaling */
+    transition: transform 0.3s ease-out; /* Smooth scaling transition */
+    max-height: 80vh; /* Max height of modal content (80% of viewport height) */
+    /* overflow-y: auto; Allow scrolling if content exceeds max height */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    width: 100%; /* Ensure modal content doesn't take up full width */
+    max-width: 700px; /* Limit maximum width */
+  }
+  
+  /* Modal content elements */
+  #modalName, #modalPosition, #modalContactInfo, #modalDescription {
+    margin-bottom: 10px; /* Space between elements */
+    padding: 0 10px; /* Padding for better readability */
+  }
+  
+  /* Modal description area */
+  #modalDescription {
+    overflow-wrap: break-word; /* Ensure long words break properly */
+    word-wrap: break-word; /* Prevent text from overflowing */
+    max-height: 300px; /* Optional: set a max height for the description */
+    overflow-y: auto; /* Allow vertical scrolling if the description is long */
+    margin-bottom: 20px; /* Space at the bottom of the description */
+  }
+  
+  /* Modal content heading and text */
+  #modalName {
+    font-size: 1.5rem; /* Title font size */
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #modalPosition {
+    text-align: center;
+    font-style: italic;
+  }
+  
+  #modalContactInfo {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Modal image styling */
+  #modalImage {
+    width: 120px; /* Fixed size for the image */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%; /* Round image */
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center image */
+  }
+  
+  /* Close button styling */
+  #teamMemberModal button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  #teamMemberModal button:hover {
+    color: #e32027; /* Change color on hover */
+  }
+  
+  /* Modal active state: visible and interactive */
+  #teamMemberModal.active {
+    opacity: 1; /* Make modal visible */
+    pointer-events: auto; /* Enable interactions */
+  }
+  
+  #teamMemberModal.active > div {
+    transform: scale(1); /* Scale modal content to full size */
+  }
+
+  /* Mobile responsive modal width */
+  @media (max-width: 768px) {
+    #teamMemberModal > div {
+      width: 90%; /* Ensure the modal takes up more space on smaller screens */
+    }
+  }
+
+  /* Team Image Hover Effect */
+  .team-img:hover {
+    transform: scale(1.05);
+  }
+
+   /* Fade-in animation for the dropdown content */
+ /* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#dropdown-overview {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(10px);
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease, transform 0.5s ease;
+}
+
+#dropdown-overview.visible {
+  opacity: 1;
+  max-height: 1000px; /* Large enough to fit all content */
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+
+#image-container {
+  max-height: 24rem;
+  transition: max-height 0.5s ease;
+}
+
+#image-container.expanded {
+  max-height: 100%; /* Expand to fit content */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.counter {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.counter:hover {
+  transform: scale(1.1);
+}
+
+.counter > p {
+  transition: color 0.3s ease;
+}
+
+.counter > p:hover {
+  color: #e32027;
+}
+

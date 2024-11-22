@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multipointers LTD - Consultancy Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+        fontFamily: {
+        sans: ['Helvetica', 'Arial','sans-serif'],
+        },
+            colors: {
+                textColor: '#191917',
+            }
+            }
+        }
+        }
+    </script>
+
+
+</head>
+<body id="home" class=" bg-[#d6d5d3] text-[#191917] font-helvetica font-helvetica overflow-x-hidden">
+
+    <!-- Navbar with Dropdowns for Each Menu -->
+<nav class="fixed w-full z-20 text-[#191917] px-6 py-4 flex justify-between items-center shadow-md transition-colors duration-300">
+    <!-- Logo and Branding -->
+    <div class="flex items-center">
+        <a href="#home">
+            <img class="h-10" src="Images/multipointers logo.png" alt="Logo">  
+        </a>
+        <a href="#home"><span class="text-xl font-bold text-white cursor-pointer"> Multipointers LTD</span></a>
+    </div>
+
+    <!-- Desktop Nav Links -->
+    <ul class="hidden md:flex space-x-8 text-lg text-white">
+        <li><a href="#home" class="hover:text-[#e32027] offer-text">Home</a></li>
+        <li class="relative group">
+            <a href="#services" class="hover:text-[#e32027] offer-text">Services</a>
+            <ul class="dropdown-content hidden absolute bg-black/80 text-[17px] text-[#969696] w-52 rounded shadow-lg">
+                <li><a href="#project-management" class="block  py-0.5 hover:bg-[#e32027]">Project Management</a></li>
+                <div class="h-[1px] w-full bg-[#969696] bg-opacity-15 rounded-md"></div>
+                <li><a href="#quantity-surveying" class="block text-[16px] px-4 py-0.5 hover:bg-[#e32027]">Quantity Surveying</a></li>
+                <div class="h-[1px] w-full bg-[#969696] bg-opacity-15 rounded-md"></div>
+                <li><a href="#design-build" class="block text-[16px] px-4 py-0.5 hover:bg-[#e32027]">Designing & Building</a></li>
+                <div class="h-[1px] w-full bg-[#969696] bg-opacity-15 rounded-md"></div>
+                <li><a href="#road" class="block text-[16px] px-4 py-0.5 hover:bg-[#e32027]">Road Consulting</a></li>
+                <div class="h-[1px] w-full bg-[#969696] bg-opacity-15 rounded-md"></div>
+                <li><a href="#procurement" class="block text-[16px] px-4 py-0.5 hover:bg-[#e32027]">Procurement</a></li>
+            </ul>
+        </li>
+        <li class="relative group">
+            <a href="#about" class="hover:text-[#e32027] offer-text">About Us</a>
+            <ul class="dropdown-content hidden absolute bg-black/80 text-[#969696]  rounded shadow-xl">
+                <li><a href="#team" class="block text-[16px] px-4 py-0.5 hover:bg-[#e32027]">Our Experts</a></li>
+                <div class="h-[1px] w-full bg-[#969696] bg-opacity-15 rounded-md"></div>
+                <li><a href="#company-overview" class="block text-[16px] px-4 py-0.5 hover:bg-[#e32027]">Overview</a></li>
+                <div class="h-[1px] w-full bg-[#969696] bg-opacity-15 rounded-md"></div>
+                
+                <!-- <li><a href="#mission" class="block text-[16px] px-4 py-0.5 hover:bg-[#e32027]">Mission</a></li>
+                <div class="h-[1px] w-full bg-[#969696] bg-opacity-15 rounded-md"></div>
+                <li><a href="testimonials" class="block text-[16px] px-4 py-0.5 hover:bg-[#e32027]">Testimonials</a></li> -->
+            </ul>
+        </li>
+        <li><a href="#contact" class="hover:text-[#e32027] offer-text">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Menu Icon -->
+    <button id="menu-toggle" class="md:hidden text-2xl text-white focus:outline-none">☰</button>
+
+    <!-- Mobile Nav Links -->
+    <ul id="mobile-menu" class="hidden flex-col space-y-4 text-lg font-medium bg-black/80 p-6 absolute top-16 left-0 w-full text-white">
+        <li><a href="#home" class="hover:text-[#e32027]">Home</a></li>
+        <li><a href="#services" class="hover:text-[#e32027]">Services</a></li>
+        <li><a href="#about" class="hover:text-[#e32027]">About</a></li>
+        <li><a href="#projects" class="hover:text-[#e32027]">Projects</a></li>
+        <li><a href="#contact" class="hover:text-[#e32027]">Contact</a></li>
+    </ul>
+</nav>
+       
+   <!-- Hero Section with Swipe Animation -->
+<header class="hero-section h-screen relative overflow-hidden">
+    <!-- Slide 1 -->
+    <div class="hero-slide h-full w-full flex items-center justify-center bg-cover bg-center absolute inset-0 transition-transform duration-700" 
+         style="background-image: url('https://img-cdn.pixlr.com/image-generator/history/673634cc638f8d20200b73ee/1c0f6bab-9a3c-45ec-8cee-b2d458ac43eb/preview.webp');" id="slide1">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="text-center text-white z-10">
+            <h1 class="text-5xl md:text-6xl font-bold">Welcome to Multipointers LTD</h1>
+            <p class="text-lg md:text-2xl mt-4">Your Partner in Project Management and Consultancy</p>
+            <button class="btn-hover btn-active mt-8 px-6 py-3 bg-[#e32027] text-white font-semibold rounded hover:bg-[#c51c24] transition duration-300">
+                <a href="#services">Discover Our Services</a>
+            </button>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="hero-slide h-full w-full flex items-center justify-center bg-cover bg-center absolute inset-0 transition-transform duration-700 transform translate-y-full" 
+         style="background-image: url('https://img-cdn.pixlr.com/image-generator/history/673633e4638f8d20200b483f/96aa03b1-546e-4164-9142-0673391ac046/preview.webp');" id="slide2">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="text-center text-white z-10">
+            <h1 class="text-5xl md:text-6xl font-bold">Let's Connect</h1>
+            <p class="text-lg md:text-2xl mt-4">Reach out to our experts today</p>
+            <button class="btn-hover btn-active mt-8 px-6 py-3 bg-[#e32027] text-white font-semibold rounded hover:bg-[#c51c24] transition duration-300">
+                <a href="#contact">Contact Us</a>
+            </button>
+        </div>
+    </div>
+</header>
+
+    <!-- Services Section -->
+<section id="services" class="pt-16 pb-12 bg-[#f7f7f7] ">
+        <h2 class="text-3xl font-bold mb-6  text-center">What We Offer</h2>
+        <!-- Swiper Container -->
+    <div class="swiper-container">
+        <!-- Swiper Wrapper -->
+        <div class="swiper-wrapper md:px-12">
+            <!-- Service Item -->
+            <div id="project-management" class="swiper-slide p-6">
+                <img class="services-image w-full h-[200px] object-cover mb-4" src="https://storage.googleapis.com/production-ipage-v1-0-0/570/747570/QVOxhADC/c28aa748e16249798dfb3d64a86505e4" >
+                <h3 class="text-xl font-semibold">Project Management</h3>
+                <p class="my-4 w-11/12">Professional oversight for your projects from start to finish.</p>
+                <button class="btn-hover btn-active bg-[#e32027] text-xs text-white uppercase font-bold p-4 rounded transition duration-500">
+                    <a href="#">Service Details</a>
+                </button>
+            </div>
+            
+            <div id="quantity-surveying" class="swiper-slide p-6">
+                <img class=" services-image w-full h-[200px] object-cover mb-5" src="https://img-cdn.pixlr.com/image-generator/history/6735b9b7869b97dc43ffd2d0/260ca3c2-9f03-45a2-9b72-98605de6a086/preview.webp" >
+                <h3 class="text-xl font-semibold">Quantity Surveying</h3>
+                <p class="my-4 w-11/12">Professional oversight for your projects from start to finish.</p>
+                <button class="btn-hover btn-active bg-[#e32027] text-xs text-white uppercase font-bold p-4 rounded transition duration-500">
+                    <a href="#">Service Details</a>
+                </button>
+            </div>
+
+            <div id="design-build" class="swiper-slide p-6">
+                <img class="services-image w-full h-[200px] object-cover mb-5" src="Images/Dodd Photographs of Projects execcuted by Multipointers Ltd.JPG" >
+                <h3 class="text-xl font-semibold">Designing & Building</h3>
+                <p class="my-4 w-11/12">Professional oversight for your projects from start to finish.</p>
+                <button class="btn-hover btn-active bg-[#e32027] text-xs text-white uppercase font-bold p-4 rounded transition duration-500">
+                    <a href="#">Service Details</a>
+                </button>
+            </div>
+           
+            <div id="road" class="swiper-slide p-6 ">
+                <img class="services-image w-full h-[200px] object-cover mb-5" src="https://images.unsplash.com/photo-1514606491078-3c8ff84c87e7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" >
+                <h3 class="text-xl font-semibold">Road Consulting</h3>
+                <p class="my-4 w-11/12">Professional oversight for your projects from start to finish.</p>
+                <button class="btn-hover btn-active bg-[#e32027] text-xs text-white uppercase font-bold p-4 rounded transition duration-500">
+                    <a href="#">Service Details</a>
+                </button>
+            </div>
+
+            <div id="procurement" class="swiper-slide p-6">
+                <img class="services-image w-full h-[200px] object-cover mb-5" src="https://img-cdn.pixlr.com/image-generator/history/6735c053869b97dc4300bfc8/4829027e-7f93-467a-afdf-cdb8e1557cfc/preview.webp" >
+                <h3 class="text-xl font-semibold">Procurement</h3>
+                <p class="my-4 w-11/12">Professional oversight for your projects from start to finish.</p>
+                <button class="btn-hover btn-active bg-[#e32027] text-xs text-white uppercase font-bold p-4 rounded transition duration-500">
+                    <a href="#">Service Details</a>
+                </button>
+            </div>
+        </div>
+    </div> 
+</section>
+
+<!-- Meet the Team Section -->
+<section id="team" class="pt-16 pb-12 text-center overflow-hidden">
+    <h2 class="text-3xl font-bold pb-12  text-center">Our Experienced Experts</h2>
+    <div class="grid md:grid-cols-3 gap-8 px-6 md:px-12">
+        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <img class="team-img w-64 h-64 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105 cursor-pointer"
+                 src="Images/CEO.png"
+                 alt="Mr. Charles Lokko"
+                 onclick="openModal('Mr. Charles Lokko', 'Quantity Surveyor', '(+233) 244-377-506 • calokko@gmail.com', 'With over 20 years of experience in Quantity Surveying, Charles A. Lokko is a seasoned professional in cost management, procurement, and project execution. He is a Kwame Nkrumah University of Science and Technology (KNUST) graduate and holds a Master’s Degree in Procurement Management from the same institution. As a certified member of the Ghana Institution of Surveyors, Charles has been an invaluable cost expert on a wide range of building, civil, and road works projects across Ghana. Charles’s expertise spans beyond traditional Quantity Surveying; he is also well-versed in Facilities Management and Project Management. His extensive experience is further enhanced by his training in Project Management from the Project Management Institute (PMI–USA) through Merjja Technologies, where he pursued certification as a Project Management Professional (PMP). This unique combination of skills allows Charles to effectively manage client requirements, adhere to budgets, and maintain stringent timelines, making him an asset to any project in the built environment. Results-driven and highly self-directed, Charles brings a wealth of knowledge and a solutions-oriented approach to the team. His commitment to excellence in cost control, procurement strategy, and project delivery makes him a key player in ensuring the success of every project.', 'Images/CEO.png')">
+            <h3 class="text-xl font-semibold">
+              <span class="text-[#e32027] hover:underline cursor-pointer"
+                    onclick="openModal('Mr. Charles Lokko', 'Quantity Surveyor', '(+233) 244-377-506 • calokko@gmail.com', 'With over 20 years of experience in Quantity Surveying, Charles A. Lokko is a seasoned professional in cost management, procurement, and project execution. He is a Kwame Nkrumah University of Science and Technology (KNUST) graduate and holds a Master’s Degree in Procurement Management from the same institution. As a certified member of the Ghana Institution of Surveyors, Charles has been an invaluable cost expert on a wide range of building, civil, and road works projects across Ghana. Charles’s expertise spans beyond traditional Quantity Surveying; he is also well-versed in Facilities Management and Project Management. His extensive experience is further enhanced by his training in Project Management from the Project Management Institute (PMI–USA) through Merjja Technologies, where he pursued certification as a Project Management Professional (PMP). This unique combination of skills allows Charles to effectively manage client requirements, adhere to budgets, and maintain stringent timelines, making him an asset to any project in the built environment. Results-driven and highly self-directed, Charles brings a wealth of knowledge and a solutions-oriented approach to the team. His commitment to excellence in cost control, procurement strategy, and project delivery makes him a key player in ensuring the success of every project.', 'Images/CEO.png')">Mr. Charles Lokko</span>
+            </h3>
+            <p class="mt-2">Quantity Surveyor</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <img class="team-img w-64 h-64 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105 cursor-pointer"
+                 src="Images/corporate man 2.png"
+                 alt="Hans-Jurgen Aryee"
+                 onclick="openModal('Hans-Jurgen Aryee', 'Project Quantity Surveyor', '(308) 555-0121 • hans@example.com', 'Hans-Jurgen holds a B.Sc (Hons) in Building Technology from Kwame Nkrumah University of Science and Technology and an Executive MBA (Finance Option) from the University of Ghana Business School. He is a professional member of the Ghana Institution of Surveyors (GhIS) since 2010, with over 15 years of experience in Quantity Surveying and Project Management.Hans-Jurgen is passionate about delivering value through high standards of project management and cost control. His expertise lies in technical auditing, financial feasibility assessments, and cost management, ensuring that projects are delivered efficiently, within budget, and to the highest standards. He is committed to providing clear, transparent, and timely advice, enabling clients to make informed decisions throughout the project lifecycle.', 'Images/corporate man 2.png')">
+            <h3 class="text-xl font-semibold">
+              <span class="text-[#e32027] hover:underline cursor-pointer" onclick="openModal('Hans-Jurgen Aryee', 'Project Quantity Surveyor', '(308) 555-0121 • hans@example.com', 'Hans-Jurgen holds a B.Sc (Hons) in Building Technology from Kwame Nkrumah University of Science and Technology and an Executive MBA (Finance Option) from the University of Ghana Business School. He is a professional member of the Ghana Institution of Surveyors (GhIS) since 2010, with over 15 years of experience in Quantity Surveying and Project Management.Hans-Jurgen is passionate about delivering value through high standards of project management and cost control. His expertise lies in technical auditing, financial feasibility assessments, and cost management, ensuring that projects are delivered efficiently, within budget, and to the highest standards. He is committed to providing clear, transparent, and timely advice, enabling clients to make informed decisions throughout the project lifecycle.', 'Images/corporate man 2.png')">
+                    Hans-Jurgen Aryee
+                </span>
+            </h3>
+            <p class="mt-2">Project Quantity Surveyor</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <img class="team-img w-64 h-64 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105 cursor-pointer"
+                 src="Images/corporate man 2.png"
+                 alt="Kassim Fuseni Osman"
+                 onclick="openModal('Kassim Fuseni Osman', 'Quantity Surveyor & Construction Manager', '(308) 555-0121 • kassimfuseni494@gmail.com', ' Kassim Fuseni Osman is a dedicated and results-oriented professional with a strong foundation in Quantity Surveying and Construction Management. He holds a BSc in Quantity Surveying and Construction Economics, along with an MSc in Construction Management from Kwame Nkrumah University of Science and Technology (KNUST). Kassim brings two years of industry experience, specializing in cost estimation, project budgeting, construction management, and contract administration for building, civil, and road projects. Proficient in a wide range of construction software, Kassim ensures efficient financial and contractual oversight, supporting project success through quality, timeliness, and cost-effectiveness.', 'Images/corporate man 2.png')">
+            <h3 class="text-xl font-semibold">
+              <span class="text-[#e32027] hover:underline cursor-pointer"
+                    onclick="openModal('Kassim Fuseni Osman', 'Quantity Surveyor & Construction Manager', '(308) 555-0121 • kassimfuseni494@gmail.com', ' Kassim Fuseni Osman is a dedicated and results-oriented professional with a strong foundation in Quantity Surveying and Construction Management. He holds a BSc in Quantity Surveying and Construction Economics, along with an MSc in Construction Management from Kwame Nkrumah University of Science and Technology (KNUST). Kassim brings two years of industry experience, specializing in cost estimation, project budgeting, construction management, and contract administration for building, civil, and road projects. Proficient in a wide range of construction software, Kassim ensures efficient financial and contractual oversight, supporting project success through quality, timeliness, and cost-effectiveness.', 'Images/corporate man 2.png')">
+                    Kassim Fuseni Osman</span>
+            </h3>
+            <p class="mt-2">Quantity Surveyor & Construction Manager</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <img class="team-img w-64 h-64 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105 cursor-pointer"
+                 src="Images/corporate man 2.png"
+                 alt="Benjamin Conduah"
+                 onclick="openModal('Benjamin Conduah', 'Quantity Surveyor', '(308) 555-0121 • charles@example.com', 'Benjamin Conduah is a passionate and driven Quantity Surveyor with a BSc Quantity Surveying and Construction Economics from Kwame Nkrumah University of Science and Technology (KNUST), Kumasi. With 4 years of hands-on experience in the practice of Quantity Surveying, Benjamin has developed a strong foundation in cost management, project estimation, and contract administration. A detail-oriented professional, Benjamin is committed to contributing to team success through hard work, exceptional organizational skills, and a keen eye for accuracy. His ability to adapt quickly to new working environments, while maintaining the high standards expected in his field, makes him a valuable asset to any project. Enthusiastic and career-focused, Benjamin is eager to continue learning and growing within the industry, delivering quality results and supporting team objectives.', 'Images/corporate man 2.png')">
+            <h3 class="text-xl font-semibold">
+              <span class="text-[#e32027] hover:underline cursor-pointer"
+                    onclick="openModal('Benjamin Conduah', 'Quantity Surveyor', '(308) 555-0121 • charles@example.com', 'Benjamin Conduah is a passionate and driven Quantity Surveyor with a BSc Quantity Surveying and Construction Economics from Kwame Nkrumah University of Science and Technology (KNUST), Kumasi. With 4 years of hands-on experience in the practice of Quantity Surveying, Benjamin has developed a strong foundation in cost management, project estimation, and contract administration. A detail-oriented professional, Benjamin is committed to contributing to team success through hard work, exceptional organizational skills, and a keen eye for accuracy. His ability to adapt quickly to new working environments, while maintaining the high standards expected in his field, makes him a valuable asset to any project. Enthusiastic and career-focused, Benjamin is eager to continue learning and growing within the industry, delivering quality results and supporting team objectives.', 'Images/corporate man 2.png')">
+                    Benjamin Conduah
+                </span>
+            </h3>
+            <p class="mt-2">Quantity Surveyor</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <img class="team-img w-64 h-64 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105 cursor-pointer"
+                 src="Images/corporate man 2.png"
+                 alt="J.K. Obiri"
+                 onclick="openModal('J.K. Obiri', 'Quantity Surveyor', '(308) 555-0121 • obiri@example.com', 'J.K. Obiri is a seasoned Quantity Surveyor specializing in construction management and cost estimation.', 'Images/corporate man 2.png')">
+            <h3 class="text-xl font-semibold">
+              <span class="text-[#e32027] hover:underline cursor-pointer"
+                    onclick="openModal('J.K. Obiri', 'Quantity Surveyor', '(308) 555-0121 • obiri@example.com', 'J.K. Obiri is a seasoned Quantity Surveyor specializing in construction management and cost estimation.', 'Images/corporate man 2.png')">
+                    J.K. Obiri
+                </span>
+            </h3>
+            <p class="mt-2">Quantity Surveyor</p>
+        </div>  
+        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <img class="team-img w-64 h-64 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105 cursor-pointer"
+                 src="Images/corporate man 2.png"
+                 alt="Isaac Ntiamoah"
+                 onclick="openModal('Isaac Ntiamoah', 'Quantity Surveyor', '(308) 555-0121 • obiri@example.com', 'Isaac Ntiamoah is a seasoned Quantity Surveyor specializing in construction management and cost estimation.', 'Images/corporate man 2.png')">
+            <h3 class="text-xl font-semibold">
+              <span class="text-[#e32027] hover:underline cursor-pointer"
+                    onclick="openModal('Isaac Ntiamoah', 'Quantity Surveyor', '(308) 555-0121 • obiri@example.com', 'Isaac Ntiamoah is a seasoned Quantity Surveyor specializing in construction management and cost estimation.', 'Images/corporate man 2.png')">
+                    Isaac Ntiamoah
+                </span>
+            </h3>
+            <p class="mt-2">Civil Engineer</p>
+        </div>          
+    </div>
+</section>
+  
+  <!-- Modal Structure -->
+  <div id="teamMemberModal" class="fixed z-30 inset-0 bg-gray-600 bg-opacity-50 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="relative bg-white px-6 pb-6 pt-0 rounded-lg shadow-lg max-w- md">
+            <!-- Close button -->
+            <button onclick="closeModal()" class="absolute top-2 right-2 bg-transparent text-gray-600 hover:bg-gray-900 hover:text-red-600 text-xl font-bold p-2 rounded-full transition-all duration-200">
+                &times;
+            </button>
+            
+            <img id="modalImage" class="w-32 h-32 mt-6 object-cover rounded-full mx-auto" alt="Team Member">
+            <h3 id="modalName" class="text-2xl font-semibold mt-4 text-center"></h3>
+            <p id="modalPosition" class="text-center"></p>
+            <p id="modalContactInfo" class="text-center mt-2"></p>
+            <p id="modalDescription" class="mt-4 text-center text-[#545454] text-sm"></p>
+        </div>
+    </div>
+  </div>
+  
+
+<!-- About Us Section -->
+<section id="company-overview" class="relative bg-[#f7f7f7] pt-16 pb-12 overflow-hidden px-6 md:px-12">
+    <h2 class="text-3xl font-bold pb-12 text-center leading-tight tracking-wide">Company Overview</h2>
+  
+    <div class="flex flex-col md:flex-row items-center md:items-start space-y-12 md:space-y-0 md:space-x-16">
+      <!-- Image Section -->
+      <div id="image-container" class=" relative w-full md:w-1/2 h-96 rounded-lg overflow-hidden shadow-lg transition-all">
+        <img
+          src="https://storage.googleapis.com/production-ipage-v1-0-0/570/747570/QVOxhADC/3e1a3700fb204ac592dd77db14a72ce3"
+          alt="Company Image"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-gray-800 to-black opacity-60"></div>
+      </div>
+  
+      <!-- Text Content -->
+      <div class="md:w-1/2">
+        <h3 class="text-3xl font-semibold mb-4 text-[#e32027]">Who We Are</h3>
+        <p class="text-gray-700 text-base leading-relaxed mb-6">
+          Multipointers Limited is a fast-growing Ghanaian firm specializing in multidisciplinary services. With over 9 years of expertise, we provide cutting-edge solutions to public and private sector clients in development activities and engineering.
+        </p>
+        <button
+          id="learn-more-btn"
+          class="btn-hover px-6 py-3 bg-[#e32027] text-white font-semibold rounded-lg shadow-md transition duration-300">
+          Learn More
+        </button>
+       
+  
+        <!-- Dropdown Content -->
+        <div id="dropdown-overview" class="hidden mt-8 space-y-6">
+          <!-- Our Commitment -->
+          <div>
+            <h4 class="text-xl font-bold text-[#e32027]">Our Commitment</h4>
+            <p class="text-gray-700 text-base leading-relaxed">
+              Multipointers Limited is committed to impartiality and innovation. We remain independent of manufacturing,
+              contracting, or government interests, ensuring our clients receive unbiased advice and recommendations
+              grounded in cutting-edge technology and industry best practices.
+            </p>
+          </div>
+  
+          <!-- Our Philosophy -->
+          <div>
+            <h4 class="text-xl font-bold text-[#e32027]">Our Philosophy</h4>
+            <p class="text-gray-700 text-base leading-relaxed">
+              We prioritize quality—not only in design and construction but also in our relationships with clients and
+              communities. At Multipointers Limited, we believe that teamwork fosters innovation and ensures lasting impact.
+            </p>
+          </div>
+  
+          <!-- Why Choose Us -->
+          <div>
+            <h4 class="text-xl font-bold text-[#e32027]">Why Choose Multipointers Limited?</h4>
+            <ul class="list-disc list-inside text-gray-700">
+              <li>Over 9 years of experience delivering successful projects across Ghana</li>
+              <li>Proven track record of working with both local clients and international agencies</li>
+              <li>Strong focus on sustainable, innovative, and client-centric solutions</li>
+              <li>Comprehensive expertise across multiple engineering and consulting disciplines</li>
+            </ul>
+          </div>
+        </div>
+
+        <button
+            id="collapse-button"
+            class="btn-hover hidden mt-5 px-6 py-3 bg-gray-500 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600 transition duration-300"
+            >
+            Collapse
+        </button>
+
+      </div>
+    </div>
+
+    <section id="statistics" class=" bg-[#f7f7f7] py-16 uppercase">
+        <div class="container mx-auto">
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center ">
+            <!-- Counter Item -->
+            <div class="font-bold">
+              <span class="counter text-6xl font-bold text-[#e32027]" data-target="150">0</span>
+              <p class="mt-4 text-2xl text-gray-700">Projects Completed </p>
+            </div>
+            <div class="font-bold">
+              <span class="counter text-6xl font-bold text-[#e32027]" data-target="50">0</span>
+              <p class="mt-4 text-2xl text-gray-700">Satisfied Clients</p>
+            </div >
+            <div class="font-bold">
+              <span class="counter text-6xl font-bold text-[#e32027]" data-target="20">0</span>
+              <p class="mt-4 text-2xl text-gray-700">Years of Experience </p>
+            </div>
+          </div>
+        </div>
+    </section>
+        
+</section>
+  
+
+
+<!-- Contact Section with Interactive Form -->
+<section id="contact" class="py-16 ">
+    <div class="container mx-auto ">
+      <!-- Header Section -->
+      <h2 class="text-3xl font-bold pb-12 text-center leading-tight tracking-wide">Contact Us</h2>
+  
+      <!-- Grid Layout -->
+      <div class="bg-black/20 grid grid-cols-1 lg:grid-cols-3 gap-12  shadow-xl">
+        <!-- Form Section -->
+        <form class="lg:col-span-2 p-8 bg-white  shadow-lg">
+          <div class="grid grid-cols-2 gap-6 mb-6">
+            <input
+              type="text"
+              class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e32027] focus:outline-none"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e32027] focus:outline-none"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <div class="mb-6">
+            <input
+              type="email"
+              class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e32027] focus:outline-none"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="mb-6">
+            <input
+              type="text"
+              class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e32027] focus:outline-none"
+              placeholder="Company Name"
+            />
+          </div>
+          <div class="mb-6">
+            <textarea
+              class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e32027] focus:outline-none"
+              placeholder="Write your message here..."
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-[#e32027] text-white font-semibold py-3 rounded-lg hover:bg-[#c51c24] transition duration-300">
+            Send Message
+          </button>
+        </form>
+  
+        <!-- Contact Info Section -->
+        <div class="text-left  md:mt-20 lg:text-left">
+          <h3 class="text-2xl font-bold mb-2 " >Our Office Address</h3>
+          <p class="text-md text-black/50 mb-8">
+            <a
+              href="https://maps.app.goo.gl/D7U95jSUTutWCdg56"
+              target="_blank"
+              class="text-black/50 mb-8 underline hover:no-underline"
+            >
+              Community Eight, Tema, Ghana <br />
+              P.O. Box 1612, Ghana
+            </a>
+          </p>
+  
+          <h3 class="text-2xl font-bold mb-2" >Talk to Us</h3>
+          <p class="text-md text-black/70 mb-8">
+            Tel: <a href="tel:+233244377506" class="text-black/70 mb-8 underline hover:no-underline">+233 24 4377506</a> /
+            <a href="tel:+233244974359" class="text-black/70 mb-8 underline hover:no-underline">+233 24 4974359</a><br />
+            Email: <a href="mailto:mail@multipointers.com" class="text-black/70 mb-8 underline hover:no-underline">mail@multipointers.com</a>
+          </p>
+  
+          <h3 class="text-2xl font-bold mb-2" >Business Hours</h3>
+          <p class="text-md text-black/70">
+            Monday-Friday: 9am to 5pm <br />
+            Saturday - Sunday: Closed
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+  
+  
+ <!-- Footer -->
+ <!-- <footer class="bg-black/60 text-white py-6 text-center">
+    <p class="text-sm">&copy; 2024 Multipointers LTD. All rights reserved.</p>
+</footer> -->
+
+<footer class="w-full bg-black/60 text-white p-8">
+    <div class=" flex flex-row flex-wrap items-center text-white justify-center gap-y-6 gap-x-12 text-center md:justify-between">
+        <a href="#home">
+            <img class="h-10" src="Images/multipointers logo.png" alt="Logo">
+        </a>
+   
+      <ul class="text-white flex flex-wrap items-center gap-y-2 gap-x-8">
+        <li>
+          <a
+            href="#home"
+            class=" hover:text-red-600 focus:text-slate-500 text-sm"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="#services"
+            class="text-white hover:text-gray-700 mb-8 focus:text-black/80 text-sm"
+          >
+            Services
+          </a>
+        </li>
+        <li>
+          <a
+            href="#company-overview"
+            class="text-white hover:text-[#e32027] focus:text-black/80 text-sm"
+          >
+           About Us
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="text-white hover:text-[#e32027] focus:text-black/80 text-sm"
+          >
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p class="block mb-4 text-sm text-center text-black/80 md:mb-0 border-t border-slate-200 mt-4 pt-4">
+      Copyright © 2024&nbsp; 
+      <a href="#home" target="_blank" rel="noreferrer">Multipointers LTD</a>.
+    </p>
+</footer>
+
+    
+<script src="main.js"></script>
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+       const swiper = new Swiper('.swiper-container', {
+        autoplay: { delay: 2500 },
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        breakpoints: {
+            640:{
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            }
+        }
+    });
+    </script>
+    
+</body>
+</html>
